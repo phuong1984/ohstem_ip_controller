@@ -2,7 +2,6 @@ import network
 import socket
 import time
 
-from servo import servo
 from utility import translate
 
 # IP tinh cua robot, phai khop voi ROBOT_IP trong file html dieu khien
