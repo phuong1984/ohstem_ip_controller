@@ -12,6 +12,10 @@ mở rộng này để sử dụng các khối lệnh điều khiển robot.
 
 ![Tìm mục mở rộng IP controller](./images/find%20extension.gif)
 
+Các khối IP controller dùng để nhận và xử lý tín hiệu từ trang điều khiển:
+
+![Các khối lệnh IP controller](./images/blocks.png)
+
 ### 2. Tải trang điều khiển HTML
 
 Tải [fpv-ip_controller.html](./fpv-ip_controller.html) về máy tính hoặc điện
@@ -61,19 +65,3 @@ Trên trang điều khiển, nhấn vào địa chỉ camera ở đầu trang, n
 
 Mặc định camera là `192.168.1.49:81`; ứng dụng trên điện thoại có thể cấp địa
 chỉ hoặc cổng khác, vì vậy hãy dùng đúng thông tin ứng dụng đang hiển thị.
-
-## Thứ tự khối trong chương trình
-
-```
-khi bắt đầu:
-    kết nối wifi
-    mở máy chủ điều khiển
-lặp vô hạn:
-    xử lý tín hiệu nhận được
-    khi nút ... được ...
-    khi cần điều khiển ... được di chuyển
-```
-
-Khối `xử lý tín hiệu nhận được` phải nằm **trước** các khối sự kiện trong
-`lặp vô hạn`, và phải là lệnh trần (không bọc trong `if`).
-
